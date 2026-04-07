@@ -3,109 +3,218 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>QoS-QoE Translation</title>
+  <title>QoS-QoE Translation with Large Language Model</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
+      font-family: 'Montserrat', sans-serif;
+      max-width: 1200px;
       margin: 0 auto;
       padding: 40px 20px;
-      line-height: 1.6;
+      line-height: 1.5;
       color: #222;
       background: #ffffff;
     }
+
     h1, h2 {
       color: #111;
     }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      margin-bottom: 30px;
+    }
+
+    .authors {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px 40px;
+      justify-items: center;
+      align-items: start;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .author {
+      text-align: center;
+    }
+
+    .author-name {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    .author p {
+      margin: 0;
+      font-size: 1rem;
+    }
+
     .subtitle {
       font-size: 1.1rem;
       color: #555;
-      margin-top: -10px;
+      margin-top: 10px;
       margin-bottom: 30px;
+      text-align: center;
     }
+
     .buttons {
-      margin: 25px 0;
+      margin: 30px 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 18px;
     }
+
     .buttons a {
-      display: inline-block;
-      margin-right: 12px;
-      margin-bottom: 12px;
-      padding: 10px 16px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-width: 80px;
+      padding: 10px 18px;
       text-decoration: none;
-      border-radius: 8px;
-      background: #f2f2f2;
-      color: #111;
-      border: 1px solid #ddd;
+      border-radius: 999px;
+      background: #000000;
+      color: #ffffff;
+      border: none;
+      font-size: 1.1rem;
+      font-weight: 700;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+      transition: transform 0.15s ease, background 0.15s ease;
     }
+
+    .buttons a:hover {
+      background: #111111;
+      transform: translateY(-1px);
+    }
+
+    .button-icon {
+      width: 18px;
+      height: 18px;
+      display: block;
+      filter: brightness(0) invert(1);
+    }
+
     .section {
       margin-top: 40px;
     }
+
     code {
       background: #f5f5f5;
       padding: 2px 6px;
       border-radius: 4px;
     }
+
     .note {
       color: #666;
       font-size: 0.95rem;
     }
+
+    @media (max-width: 900px) {
+      .authors {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .authors {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>QoS-QoE Translation</h1>
-  <p class="subtitle">
-    A source-grounded dataset of structured QoS-QoE relationships from the multimedia literature.
-  </p>
+  <div class="hero">
+    <h1>QoS-QoE Translation with Large Language Model</h1>
 
-  <div class="buttons">
-    <a href="#">Paper</a>
-    <a href="#">Dataset</a>
-    <a href="#">Code</a>
-    <a href="#">Supplementary Material</a>
+    <div class="authors">
+      <div class="author">
+        <div class="author-name">Yingjie Yu</div>
+        <p>yyu69@illinois.edu</p>
+        <p>University of Illinois</p>
+        <p>Urbana-Champaign</p>
+        <p>Urbana, Illinois, USA</p>
+      </div>
+
+      <div class="author">
+        <div class="author-name">Mingyuan Wu</div>
+        <p>mw34@illinois.edu</p>
+        <p>University of Illinois</p>
+        <p>Urbana-Champaign</p>
+        <p>Urbana, Illinois, USA</p>
+      </div>
+
+      <div class="author">
+        <div class="author-name">Ahmadreza Eslaminia</div>
+        <p>ae15@illinois.edu</p>
+        <p>University of Illinois</p>
+        <p>Urbana-Champaign</p>
+        <p>Urbana, Illinois, USA</p>
+      </div>
+
+      <div class="author">
+        <div class="author-name">Lingzhi Zhao</div>
+        <p>lz26@illinois.edu</p>
+        <p>University of Illinois</p>
+        <p>Urbana-Champaign</p>
+        <p>Urbana, Illinois, USA</p>
+      </div>
+
+      <div class="author">
+        <div class="author-name">Kaizhuo Yan</div>
+        <p>kaizhuo2@illinois.edu</p>
+        <p>University of Illinois</p>
+        <p>Urbana-Champaign</p>
+        <p>Urbana, Illinois, USA</p>
+      </div>
+
+      <div class="author">
+        <div class="author-name">Klara Nahrstedt</div>
+        <p>klara@illinois.edu</p>
+        <p>University of Illinois</p>
+        <p>Urbana-Champaign</p>
+        <p>Urbana, Illinois, USA</p>
+      </div>
+    </div>
   </div>
 
-  <div class="section">
-    <h2>Overview</h2>
-    <p>
-      QoS-QoE Translation is a dataset of structured QoS-QoE relationships extracted from the multimedia literature,
-      with a current focus on video streaming.
-    </p>
-    <ul>
-      <li>505 curated papers</li>
-      <li>1026 source-grounded relationship records</li>
-      <li>JSON-based structured format</li>
-      <li>Source-grounded evidence and contextual metadata</li>
-    </ul>
+  <div class="buttons">
+    <a href="static/paper.pdf" target="_blank" rel="noopener noreferrer">
+      <img src="icons/pdf.svg" alt="" class="button-icon" />
+      <span>Paper</span>
+    </a>
+    <a href="static/paper.pdf" target="_blank" rel="noopener noreferrer">
+      <img src="icons/pdf.svg" alt="" class="button-icon" />
+      <span>Appendix</span>
+    </a>
+    <a href="https://drive.google.com/file/d/1vvyhoRU6q14A5hmoux8G1j288eGlf2YB/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+      <img src="icons/dataset.svg" alt="" class="button-icon" />
+      <span>Dataset</span>
+    </a>
+    <a href="https://github.com/yyu6969/qos-qoe-translation" target="_blank" rel="noopener noreferrer">
+      <img src="icons/github.svg" alt="" class="button-icon" />
+      <span>Code</span>
+    </a>
   </div>
 
   <div class="section">
     <h2>Abstract</h2>
     <p>
-      We introduce QoS-QoE Translation, a source-grounded dataset of structured QoS-QoE relationships from the
-      multimedia literature. The dataset is designed to support benchmarking, modeling, retrieval, and LLM-based
-      reasoning for multimedia quality prediction and optimization.
+      QoS-QoE translation is a fundamental problem in multimedia systems because it characterizes how measurable system and network conditions affect user-perceived experience. Although many prior studies have examined this relationship, their findings are often developed for specific setups and remain scattered across papers, experimental settings, and reporting formats, limiting systematic reuse, cross-scenario generalization, and large-scale analysis. To address this gap, we first introduce <i>QoS-QoE Translation</i> dataset, a source-grounded dataset of structured QoS-QoE relationships from the multimedia literature, with a focus on video streaming related tasks. We construct the dataset through an automated pipeline that combines paper curation, QoS-QoE relationship extraction, and iterative data evaluation. Each record preserves the extracted relationship together with parameter definitions, supporting evidence, and contextual metadata. We further evaluate the capability of large language models (LLMs) on QoS-QoE translation, both before and after supervised fine-tuning on our dataset, and show strong performance on both continuous-value and discrete-label prediction in bidirectional translation, from QoS-QoE and QoE-QoS. Our dataset provides a foundation for benchmarking LLMs in QoS-QoE translation and for supporting future LLM-based reasoning for multimedia quality prediction and optimization.
     </p>
   </div>
-
-  <div class="section">
-    <h2>Citation</h2>
-    <pre><code>@inproceedings{yu2026qosqoe,
-  title={QoS-QoE Translation with Large Language Model},
-  author={Yu, Yingjie and Wu, Mingyuan and Eslaminia, Ahmadreza and Zhao, Lingzhi and Yan, Kaizhuo and Nahrstedt, Klara},
-  booktitle={Proceedings of the ACM Multimedia Conference},
-  year={2026}
-}</code></pre>
-  </div>
-
-  <div class="section">
-    <h2>Contact</h2>
-    <p>
-      For questions, please contact the authors through the project repository.
-    </p>
-  </div>
-
-  <p class="note">
-    Website under construction.
-  </p>
 </body>
 </html>
